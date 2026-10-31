@@ -1,0 +1,20 @@
+// A label and its value, in a log entry's details: "Kit", "Way", "Seed", "Given". The value wraps and the row
+// grows with it; the label column is fixed, so values line up.
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: Left;
+  Anchor: (Bottom: 4);
+
+  Label #Key {
+    Text: "";
+    Anchor: (Width: 120, Right: 8);
+    Style: (FontSize: 14, TextColor: #878e9c);
+  }
+
+  Label #Value {
+    Text: "";
+    FlexWeight: 1;
+    Style: (FontSize: 14, TextColor: #ffffff(0.85), Wrap: true);
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "format": 1,
+  "plugin": "Hledjolf:GenerousOperator",
+  "config": "config.json",
+  "sections": [
+    { "id": "limits", "label": "Limits", "description": "Caps on how much can be given. A kit marked \"limits\": false (playtest gear) is exempt, and logged either way." },
+    { "id": "messages", "label": "Messages" },
+    { "id": "kits", "label": "Kits", "description": "Size limits for random kits. A catalog that goes past them loses those tables, with a warning in the log." },
+    { "id": "server", "label": "Server presents", "description": "Which mods may give gifts from the server (rewards, quest prizes). Off by default." }
+  ],
+  "keys": {
+    "GiverDailyCap": {
+      "label": "Gifts per giver per day",
+      "description": "How many gifts one person may give in a day. 0: no limit. Server presents don't count.",
+      "section": "limits",
+      "type": "int",
+      "min": 0,
+      "max": 100000,
+      "default": 0,
+      "restart": false
+    },
+    "RecipientDailyCap": {
+      "label": "Gifts per player per day",
+      "description": "How many gifts one player may receive in a day, from anyone. 0: no limit.",
+      "section": "limits",
+      "type": "int",
+      "min": 0,
+      "max": 100000,
+      "default": 0,
+      "restart": false
+    },
+    "PairCooldownSeconds": {
+      "label": "Wait between gifts to the same player (seconds)",
+      "description": "The least time between two gifts from the same giver to the same player. 0: none.",
+      "section": "limits",
+      "type": "int",
+      "min": 0,
+      "max": 604800,
+      "step": 60,
+      "default": 0,
+      "restart": false
+    },
+    "AnonymousGivers": {
+      "label": "Hide who gave it",
+      "description": "Recipients read \"An operator sent you...\" instead of the giver's name. The gift log always keeps the real name.",
+      "section": "messages",
+      "type": "bool",
+      "default": false,
+      "restart": false
+    },
+    "Announce": {
+      "label": "Announce gifts",
+      "description": "Tell everyone online about each gift.",
+      "section": "messages",
+      "type": "bool",
+      "default": false,
+      "restart": false
+    },
+    "MaxDepth": {
+      "label": "Deepest table nesting",
+      "description": "How many random tables may sit inside each other.",
+      "section": "kits",
+      "type": "int",
+      "min": 1,
+      "max": 32,
+      "default": 8,
+      "restart": false
+    },
+    "MaxItemsPerRoll": {
+      "label": "Most items in one roll",
+      "description": "The most items one random kit may give at once, counted one by one.",
+      "section": "kits",
+      "type": "int",
+      "min": 1,
+      "max": 1000000,
+      "step": 1000,
+      "default": 10000,
+      "restart": false
+    },
+    "TrustedMods.Hledjolf:PlaytestGamified.Trusted": {
+      "label": "PlaytestGamified may give presents",
+      "description": "Lets PlaytestGamified give its rewards from the server: its own kits, Generous Operator's and the server's, up to the power below. Off: it can't give anything from the server.",
+      "section": "server",
+      "type": "bool",
+      "default": false,
+      "restart": false
+    },
+    "TrustedMods.Hledjolf:PlaytestGamified.MaxPower": {
+      "label": "PlaytestGamified: most powerful",
+      "description": "The strongest present it may give, rated on the kit's best roll: the earliest world zone where its strongest item can be had (1 to 4). 0: only kits with no rated items.",
+      "section": "server",
+      "type": "int",
+      "min": 0,
+      "max": 4,
+      "default": 1,
+      "restart": false
+    },
+    "TrustedMods.Hledjolf:PlaytestGamified.Unrated": {
+      "label": "PlaytestGamified: unrated kits",
+      "description": "Also lets it give its own kits that the power curve can't rate (modded items, for now), whatever their power.",
+      "section": "server",
+      "type": "bool",
+      "default": false,
+      "restart": false
+    }
+  }
+}

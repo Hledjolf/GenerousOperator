@@ -1,0 +1,19 @@
+// A group's heading in the kit list, as a button that collapses and expands it: "+ Builder (12)", "- Life (9)".
+// The signs are ASCII because the game's font has no triangles. It grows with its text, like ListRow.
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: Top;
+  Anchor: (Top: 6, Bottom: 3);
+
+  Button #Button {
+    LayoutMode: Top;
+    Padding: (Horizontal: 8, Vertical: 5);
+    Style: (...$C.@SecondaryButtonStyle);
+
+    Label #Label {
+      Text: "";
+      Style: (FontSize: 14, RenderBold: true, TextColor: #c9e3ff, Wrap: true);
+    }
+  }
+}

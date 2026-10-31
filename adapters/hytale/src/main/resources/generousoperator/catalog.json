@@ -1,0 +1,86 @@
+{
+  "format": "generousoperator.catalog",
+  "format_version": "1.0",
+  "mod": { "id": "Hledjolf:GenerousOperator" },
+  "kits": [
+    {
+      "id": "give-apple",
+      "name": "Give an apple",
+      "description": "One apple: something to press on a new server, and the smallest example of a catalog entry.",
+      "group": "Examples",
+      "tags": ["example", "food"],
+      "message": "{giver} sent you an apple!",
+      "items": [ { "id": "Plant_Fruit_Apple", "count": 1 } ]
+    },
+    {
+      "id": "potions-health-1",
+      "name": "Healing Potions I",
+      "description": "5 Lesser Health Potions. Each heals 30% of your health: 15% at once and 15% over 5 seconds. Brewed at a tier 1 Alchemy bench.",
+      "group": "Supplies", "kind": "potions", "tier": 1,
+      "tags": ["potions", "healing"],
+      "items": [ { "id": "Potion_Health_Lesser", "count": 5 } ]
+    },
+    {
+      "id": "potions-health-2",
+      "name": "Healing Potions II",
+      "description": "5 Small Health Potions. Each heals 45% of your health: 15% at once and 30% over 5 seconds. Brewed at a tier 2 Alchemy bench.",
+      "group": "Supplies", "kind": "potions", "tier": 2,
+      "tags": ["potions", "healing"],
+      "items": [ { "id": "Potion_Health_Small", "count": 5 } ]
+    },
+    {
+      "id": "potions-health-3",
+      "name": "Healing Potions III",
+      "description": "5 Health Potions. Each heals 60% of your health: 25% at once and 35% over 5 seconds. Brewed at a tier 3 Alchemy bench.",
+      "group": "Supplies", "kind": "potions", "tier": 3,
+      "tags": ["potions", "healing"],
+      "items": [ { "id": "Potion_Health", "count": 5 } ]
+    },
+    {
+      "id": "potions-health-4",
+      "name": "Healing Potions IV",
+      "description": "5 Greater Health Potions. Each heals 75% of your health: 25% at once and 50% over 5 seconds. Brewed at a tier 4 Alchemy bench.",
+      "group": "Supplies", "kind": "potions", "tier": 4,
+      "tags": ["potions", "healing"],
+      "items": [ { "id": "Potion_Health_Greater", "count": 5 } ]
+    },
+    {
+      "id": "food-1",
+      "name": "Camp Rations",
+      "description": "Campfire food (the game's first food tier): cooked meat, grilled fish and roast vegetables. Each heals a little at once, then a short health regeneration.",
+      "group": "Supplies", "kind": "food", "tier": 1,
+      "tags": ["food", "healing"],
+      "items": [
+        { "id": "Food_Wildmeat_Cooked", "count": 8 },
+        { "id": "Food_Fish_Grilled", "count": 4 },
+        { "id": "Food_Vegetable_Cooked", "count": 4 }
+      ]
+    },
+    {
+      "id": "food-2",
+      "name": "Cook's Basket",
+      "description": "Cooking bench food (the second food tier): bread, skewers and salad, with a longer, stronger regeneration than campfire food.",
+      "group": "Supplies", "kind": "food", "tier": 2,
+      "tags": ["food", "healing"],
+      "items": [
+        { "id": "Food_Bread", "count": 6 },
+        { "id": "Food_Kebab_Meat", "count": 4 },
+        { "id": "Food_Kebab_Vegetable", "count": 4 },
+        { "id": "Food_Salad_Berry", "count": 2 }
+      ]
+    },
+    {
+      "id": "food-3",
+      "name": "Feast Hamper",
+      "description": "The game's best food (the third food tier): pies and Caesar salad, with the longest regeneration.",
+      "group": "Supplies", "kind": "food", "tier": 3,
+      "tags": ["food", "healing"],
+      "items": [
+        { "id": "Food_Pie_Apple", "count": 2 },
+        { "id": "Food_Pie_Meat", "count": 2 },
+        { "id": "Food_Pie_Pumpkin", "count": 2 },
+        { "id": "Food_Salad_Caesar", "count": 2 }
+      ]
+    }
+  ]
+}

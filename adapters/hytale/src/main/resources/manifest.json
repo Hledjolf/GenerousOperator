@@ -1,0 +1,13 @@
+{
+  "Group": "Hledjolf",
+  "Name": "GenerousOperator",
+  "Version": "${version}",
+  "Description": "One-click gifts for server operators: give a kit to a player or everyone online, with limits and a gift log. Built on CommandDeck.",
+  "Authors": [
+    { "Name": "Hledjolf" }
+  ],
+  "Main": "generousoperator.hytale.GenerousOperatorPlugin",
+  "IncludesAssetPack": true,
+  "ServerVersion": "*",
+  "Dependencies": { "Hledjolf:CommandDeck": ">=1.1.0" }
+}

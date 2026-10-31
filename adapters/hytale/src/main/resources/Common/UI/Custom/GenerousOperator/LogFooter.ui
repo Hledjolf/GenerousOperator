@@ -1,0 +1,12 @@
+// Under a log entry: Give again, which opens the Give tab with the same recipient and kit. It never gives.
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: Right;
+  Anchor: (Height: 44);
+
+  $C.@SecondaryTextButton #GiveAgain {
+    @Text = "Give again";
+    @Anchor = (Left: 8, Width: 200);
+  }
+}

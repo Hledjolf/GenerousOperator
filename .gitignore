@@ -1,0 +1,9 @@
+# Generous Operator's public repository: only what builds and installs the mod.
+build/
+.gradle/
+run/
+*.log
+.idea/
+.vs/
+Thumbs.db
+desktop.ini

@@ -1,0 +1,19 @@
+// A kit that can't be given to the chosen recipient right now: ListRow with a dimmed label and the reason after
+// the name. It stays clickable, so the full reason can be read; the disabled state still means "selected".
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: Top;
+  Anchor: (Bottom: 3);
+
+  Button #Button {
+    LayoutMode: Top;
+    Padding: (Horizontal: 16, Vertical: 7);
+    Style: (...$C.@SecondaryButtonStyle);
+
+    Label #Label {
+      Text: "";
+      Style: (...$C.@SmallSecondaryButtonLabelStyle, TextColor: #878e9c, Wrap: true, ShrinkTextToFit: false);
+    }
+  }
+}

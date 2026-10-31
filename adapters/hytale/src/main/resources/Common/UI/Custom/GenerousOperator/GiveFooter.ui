@@ -1,0 +1,25 @@
+// Under a kit on the Give tab: Give, or Stop while a gift to everyone is going, or Done once its results are
+// shown. Only one of them is visible at a time. Re-appended on every redraw of the right pane.
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: Right;
+  Anchor: (Height: 44);
+
+  $C.@TextButton #Give {
+    @Text = "Give";
+    @Anchor = (Left: 8, Width: 150);
+  }
+
+  $C.@SecondaryTextButton #Stop {
+    @Text = "Stop";
+    @Anchor = (Left: 8, Width: 150);
+    Visible: false;
+  }
+
+  $C.@TextButton #Done {
+    @Text = "Done";
+    @Anchor = (Left: 8, Width: 150);
+    Visible: false;
+  }
+}
